@@ -10,6 +10,7 @@ pipeline {
                 sh '''
                     export JAVA_HOME=/var/jenkins_home/tools/hudson.model.JDK/11.0.1
                     echo "JAVA_HOME = ${JAVA_HOME}"
+                    sleep 60000
                     mvn -B -DskipTests clean package
                 ''' 
             }
